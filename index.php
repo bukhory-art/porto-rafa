@@ -15,6 +15,7 @@
             <li><a href="#1">Home</a></li>
             <li><a href="#container2">Tools</a></li>
             <li><a href="#3">Contact</a></li>
+            <li><a href="login.php">Login</a></li>
         </ul>
  </header>
  <div class="container-main">

@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+.sidebar {
+    width: 220px;
+ background-image: linear-gradient(to bottom, rgb(27, 60, 83),rgb(69, 104, 130));
+    color: white;
+    height: 100vh;
+    padding-top: 20px;
+    position: fixed;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #34495e;
+    border-radius: 4px;
+}
+
+.content {
+    margin-left: 220px;
+    padding: 20px;
+    width: 100%;
+    background-color: #ecf0f1;
+    min-height: 100vh;
+}
+
+/* Style container */
+.form-container {
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Judul */
+.form-container h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 20px;
+}
+
+/* Label */
+.form-container label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Input & Select */
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="file"],
+.form-container select {
+    width: 100%;
+    padding: 12px 7px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+    font-size: 14px;
+}
+
+/* Hover & Focus efek */
+.form-container input:focus,
+.form-container select:focus {
+    border-color: #007BFF;
+}
+
+/* Tombol */
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background: #007BFF;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form-container button:hover {
+    background: #0056b3;
+}
+
+.aksi-btns a {
+            margin-right:6px;
+            font-size:13px;
+            padding:6px 8px;
+            border-radius:4px;
+            text-decoration:none;
+            color:white;
+        }
+        .aksi-btns .view { background:#27ae60; }
+        .aksi-btns .edit { background:#f39c12; }
+        .aksi-btns .delete { background:#e74c3c; }
+        .note { color:#666; font-size:13px; margin-top:8px; }
+        @media (max-width:800px) {
+            .top-bar { flex-direction:column; align-items:flex-start; gap:8px; }
+            th, td { font-size:14px; padding:8px; }
+        }

@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "portovolio",
+			"path": "../portovolio"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501
+	}
+}
