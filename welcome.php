@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+// Versi lokal saya
+include 'functions.php';
+echo "Login page dari versi lokal";
+
 // Cek login
 if (!isset($_SESSION['user'])) {
     header("Location: login.php");
@@ -126,6 +130,10 @@ if (isset($_POST['submit'])) {
                  <h3>Laporan Siswa</h3>
                 <div class="form-container">
                     <h4>Tambah Siswa Baru</h4>
+               <div class="form-container">
+                    <h4>Tambah Siswa Baru</h4>
+
+
                     <form action="welcome.php?page=laporan" method="post" enctype="multipart/form-data">
                         <label for="nama">Nama:</label>
                         <input type="text" id="nama" name="nama" required>
@@ -143,7 +151,10 @@ if (isset($_POST['submit'])) {
                             <option value="Sistem Informasi">Sistem Informasi</option>
                         </select>
 
+
                                <label for="gambar">Gambar:</label>
+                        <label for="gambar">Gambar:</label>
+
                         <input type="file" id="gambar" name="gambar" accept="image/*">
                         
                         <button type="submit" name="submit">Tambah Siswa</button>
@@ -159,6 +170,8 @@ if (isset($_POST['submit'])) {
                         <th>Nama</th>
                         <th>Email</th>
                         <th>Jurusan</th>
+                        <th>No.</th>
+
                         <th>Aksi</th>
                     </tr>
                     <?php
@@ -171,15 +184,24 @@ if (isset($_POST['submit'])) {
 
 
                             <td><img src="<?= htmlspecialchars($row['gambar']); ?>" width="50"></td>
+
+                                 <td><img src="image/<?= htmlspecialchars($row['gambar']); ?>" width="50"></td>
+
                             <td><?= htmlspecialchars($row['nis']); ?></td>
                             <td><?= htmlspecialchars($row['nama']); ?></td>
                             <td><?= htmlspecialchars($row['email']); ?></td>
                             <td><?= htmlspecialchars($row['jurusan']); ?></td>
+
                             <td class="aksi-btns">
                         <a href="view.php?nis=<?= urlencode($s['nis']); ?>" class="view">View</a>
                         <a href="ubah.php?id=<?= $row["id"]; ?>" class="edit">Ubah</a>
                         <a href="hapus.php?id=<?= $row["id"];?>" class="delete">Hapus</a>
                     </td>
+                            <td> <?= $i; ?> </td> <td class="aksi-btns">
+                                
+                                <a href="ubah.php?id=<?= $row["id"];?>" class="edit">Update</a>
+                                <a href="hapus.php?id=<?= $row["id"];?>" class="delete">Hapus</a>
+                            </td>
                         </tr>
                     <?php
                         $i++;

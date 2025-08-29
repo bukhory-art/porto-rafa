@@ -1,3 +1,7 @@
+# Project Porto Rafa
+
+Ini versi dari lokal saya.
+
 <h1 style="text-align: center;">Rafa PORTOFOLIO</h1>
 
 <h1 style="text-align: center;">Halaman Portofolio</h1>
@@ -25,4 +29,3 @@
 <h1 style="text-align: center;">Halaman Kehadiran</h1>
 <p>Halaman kehadiran terdapat data siswa dari MySQL.</p>
 <img width="1919" height="938" alt="image" src="https://github.com/user-attachments/assets/30df92ca-6ccb-4240-a7fb-bdf251f30b89" />
-

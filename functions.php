@@ -1,4 +1,10 @@
 <?php
+session_start();
+
+// Versi lokal saya
+include 'functions.php';
+echo "Login page dari versi lokal";
+
 $conn = mysqli_connect("localhost", "root", '', "belajardata");
 function query($query) {
     global $conn;
@@ -39,14 +45,21 @@ function query($query) {
     $query = "INSERT INTO siswa VALUES ('', '$nama', '$nis', '$email', '$jurusan', '$gambar')";
     mysqli_query($conn, $query);
     return mysqli_affected_rows($conn);
+
   
   }
   //fungsi untuk hapus data
     function hapus($id) {
+
+  }
+
+// fungsi hapus
+  function hapus($id) {
     global $conn;
     mysqli_query($conn, "DELETE FROM siswa WHERE id =$id");
 
     return mysqli_affected_rows($conn);
+
     }
 //fungsi untuk ubah data
     function ubah($data) {
@@ -70,4 +83,31 @@ function query($query) {
     mysqli_query($conn, $query);
     return mysqli_affected_rows($conn);
     }
+
+  
+
+  function update($data){
+    global $conn;
+
+    $id         = $data["id"];
+    $nis        = htmlspecialchars($data["nis"]);
+    $nama       = htmlspecialchars($data["nama"]);
+    $email      = htmlspecialchars($data["email"]);
+    $jurusan    = htmlspecialchars($data["jurusan"]);
+    $gambar     = htmlspecialchars($data["gambar"]);
+
+    // query insert data
+    $query = " UPDATE siswa SET
+                nama    = '$nama',
+                nis     = '$nis',
+                email   = '$email',
+                jurusan = '$jurusan',
+                gambar  = '$gambar'
+              WHERE id  = $id
+            ";
+
+    mysqli_query($conn, $query);
+    return mysqli_affected_rows($conn);
+}
+
 ?>

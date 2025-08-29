@@ -1,4 +1,10 @@
+<?php
+session_start();
 
+// Versi lokal saya
+include 'functions.php';
+echo "Login page dari versi lokal";
+?>
 
 
 <!DOCTYPE html>
@@ -11,6 +17,11 @@
     <link rel="stylesheet" href="form.css">
 </head>
 <body>
+  <div class="back">
+    <a href="index.php"><i class='bxr  bx-arrow-left-stroke'  ></i></a>
+  </div>
+    
+
     <div class="wrapper">
       <form action="auth.php" method="POST">
         <h1>Login</h1>
